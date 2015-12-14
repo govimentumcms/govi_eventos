@@ -22,6 +22,7 @@ function govi_eventos_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['link_display'] = 'page_1';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -78,7 +79,6 @@ function govi_eventos_views_default_views() {
 
   /* Display: Month */
   $handler = $view->new_display('page', 'Month', 'page_1');
-  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'month';
@@ -108,7 +108,7 @@ function govi_eventos_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_fecha_evento.field_fecha_evento_value' => 'field_data_field_fecha_evento.field_fecha_evento_value',
   );
-  $handler->display->display_options['path'] = 'calendar-node-field-fecha-evento/month';
+  $handler->display->display_options['path'] = 'calendario/month';
   $handler->display->display_options['menu']['type'] = 'default tab';
   $handler->display->display_options['menu']['title'] = 'Month';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -119,7 +119,6 @@ function govi_eventos_views_default_views() {
 
   /* Display: Week */
   $handler = $view->new_display('page', 'Week', 'page_2');
-  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'week';
@@ -150,7 +149,7 @@ function govi_eventos_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_fecha_evento.field_fecha_evento_value' => 'field_data_field_fecha_evento.field_fecha_evento_value',
   );
-  $handler->display->display_options['path'] = 'calendar-node-field-fecha-evento/week';
+  $handler->display->display_options['path'] = 'calendario/mes';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Week';
   $handler->display->display_options['menu']['weight'] = '2';
@@ -158,7 +157,6 @@ function govi_eventos_views_default_views() {
 
   /* Display: Day */
   $handler = $view->new_display('page', 'Day', 'page_3');
-  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'day';
@@ -188,7 +186,7 @@ function govi_eventos_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_fecha_evento.field_fecha_evento_value' => 'field_data_field_fecha_evento.field_fecha_evento_value',
   );
-  $handler->display->display_options['path'] = 'calendar-node-field-fecha-evento/day';
+  $handler->display->display_options['path'] = 'calendario/dia';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Day';
   $handler->display->display_options['menu']['weight'] = '3';
@@ -196,7 +194,6 @@ function govi_eventos_views_default_views() {
 
   /* Display: Year */
   $handler = $view->new_display('page', 'Year', 'page');
-  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'year';
@@ -254,7 +251,7 @@ function govi_eventos_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_fecha_evento.field_fecha_evento_value' => 'field_data_field_fecha_evento.field_fecha_evento_value',
   );
-  $handler->display->display_options['path'] = 'calendar-node-field-fecha-evento/year';
+  $handler->display->display_options['path'] = 'calendario/ano';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Year';
   $handler->display->display_options['menu']['weight'] = '4';
@@ -275,6 +272,10 @@ function govi_eventos_views_default_views() {
   $handler->display->display_options['style_options']['multiday_theme'] = '1';
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
+  $handler->display->display_options['style_options']['multiday_hidden'] = array(
+    'title' => 'title',
+    'field_fecha_evento' => 'field_fecha_evento',
+  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
