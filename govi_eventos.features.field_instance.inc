@@ -564,7 +564,7 @@ function govi_eventos_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 5,
@@ -818,7 +818,7 @@ function govi_eventos_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
@@ -838,9 +838,9 @@ function govi_eventos_field_default_field_instances() {
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
-        'class' => '',
-        'configurable_class' => 1,
-        'configurable_title' => 1,
+        'class' => 'pure-button',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
         'rel' => '',
         'target' => '_blank',
         'title' => '',
@@ -914,7 +914,7 @@ function govi_eventos_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'field_slideshow',
         'settings' => array(
           'slideshow_caption' => '',
