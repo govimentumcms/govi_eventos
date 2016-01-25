@@ -21,6 +21,30 @@ function govi_eventos_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function govi_eventos_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: imagen_eventos_nodo.
+  $styles['imagen_eventos_nodo'] = array(
+    'label' => 'Imagen eventos nodo',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 310,
+          'height' => 204,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function govi_eventos_node_info() {

@@ -63,6 +63,7 @@ features[field_instance][] = node-eventos-field_inscripcion_evento
 features[field_instance][] = node-eventos-field_lugar_evento
 features[field_instance][] = node-eventos-field_multimedia_evento
 features[field_instance][] = node-eventos-field_palabras_claves_evento
+features[image][] = imagen_eventos_nodo
 features[node][] = eventos
 features[taxonomy][] = event_calendar_status
 features[taxonomy][] = eventos_frecuencia
