@@ -22,6 +22,7 @@ function govi_eventos_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Eventos';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['link_display'] = 'page_1';
@@ -292,6 +293,7 @@ function govi_eventos_views_default_views() {
   $handler->display->display_options['arguments']['date_argument']['date_fields'] = array(
     'field_data_field_fecha_evento.field_fecha_evento_value' => 'field_data_field_fecha_evento.field_fecha_evento_value',
   );
+  $handler->display->display_options['block_description'] = 'Eventos';
 
   /* Display: Upcoming */
   $handler = $view->new_display('block', 'Upcoming', 'block_2');
@@ -329,6 +331,7 @@ function govi_eventos_views_default_views() {
   );
   $translatables['eventos'] = array(
     t('Master'),
+    t('Eventos'),
     t('more'),
     t('Apply'),
     t('Reset'),

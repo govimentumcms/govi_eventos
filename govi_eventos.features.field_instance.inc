@@ -564,6 +564,10 @@ function govi_eventos_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
           'link' => 1,
         ),
         'type' => 'entityreference_label',
