@@ -30,11 +30,11 @@ function govi_eventos_image_default_styles() {
   $styles['imagen_eventos_nodo'] = array(
     'label' => 'Imagen eventos nodo',
     'effects' => array(
-      2 => array(
+      1 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 310,
-          'height' => 204,
+          'width' => 408,
+          'height' => 310,
         ),
         'weight' => 1,
       ),
