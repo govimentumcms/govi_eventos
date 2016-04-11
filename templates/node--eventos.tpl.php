@@ -96,6 +96,7 @@
 	  			<p> <?php print format_date(strtotime($node->field_fecha_evento['und'][0]['value2']), 'custom', 'd F Y, H:i');?> </p>
 	  			<?php print render($content['field_lugar_evento']); ?> 
 	  			<?php print render($content['field_informacion_contacto_event']); ?> 
+	  			<?php print render($content['field_archivos_adjuntos_evento']); ?> 
 	  		</div>
 	  	</div>
 	  </div>
