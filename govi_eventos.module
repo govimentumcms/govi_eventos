@@ -5,3 +5,15 @@
  */
 
 include_once 'govi_eventos.features.inc';
+
+
+function govi_eventos_theme($existing, $type, $theme, $path) {
+  return array(
+    'node__eventos' => array(
+      'render element' => 'content',
+      'base hook' => 'node',
+      'template' => 'node--eventos',
+      'path' => drupal_get_path('module', 'govi_eventos') . '/templates',
+    ),
+  );
+}
