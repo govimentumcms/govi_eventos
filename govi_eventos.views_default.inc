@@ -175,6 +175,33 @@ function govi_eventos_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  /* Field: Content: Fecha */
+  $handler->display->display_options['fields']['field_fecha_evento']['id'] = 'field_fecha_evento';
+  $handler->display->display_options['fields']['field_fecha_evento']['table'] = 'field_data_field_fecha_evento';
+  $handler->display->display_options['fields']['field_fecha_evento']['field'] = 'field_fecha_evento';
+  $handler->display->display_options['fields']['field_fecha_evento']['label'] = '';
+  $handler->display->display_options['fields']['field_fecha_evento']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_fecha_evento']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_fecha_evento']['settings'] = array(
+    'format_type' => 'hora',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_fecha_evento']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_fecha_evento']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
