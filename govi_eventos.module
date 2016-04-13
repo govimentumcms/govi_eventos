@@ -7,13 +7,22 @@
 include_once 'govi_eventos.features.inc';
 
 
-function govi_eventos_theme($existing, $type, $theme, $path) {
-  return array(
-    'node__eventos' => array(
-      'render element' => 'content',
-      'base hook' => 'node',
-      'template' => 'node--eventos',
-      'path' => drupal_get_path('module', 'govi_eventos') . '/templates',
-    ),
-  );
+/**
+ * Implements hook_theme_registry_alter().
+ * Trata al modulo como fuente de archivos de template para la caracteristica funcional. 
+ */
+
+function govi_eventos_theme_registry_alter(&$registry) {
+
+  //agregamos la ruta donde esta almacenado los .tpl
+  $path = drupal_get_path('module', 'govi_eventos') . '/templates';
+  
+  //identifica los archivos .tpl
+  $templates = drupal_find_theme_templates($registry, '.tpl.php', $path);
+ 
+  foreach ($templates as $key => $value) {
+    $templates[$key]['type'] = 'module';
+  }
+  
+  $registry += $templates;
 }
