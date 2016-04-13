@@ -1029,6 +1029,53 @@ function govi_eventos_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-eventos-field_video_evento'.
+  $field_instances['node-eventos-field_video_evento'] = array(
+    'bundle' => 'eventos',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'digite la url del video.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'youtube',
+        'settings' => array(
+          'youtube_autohide' => 0,
+          'youtube_autoplay' => 0,
+          'youtube_controls' => 0,
+          'youtube_height' => '',
+          'youtube_iv_load_policy' => 0,
+          'youtube_loop' => 0,
+          'youtube_showinfo' => 0,
+          'youtube_size' => 'responsive',
+          'youtube_width' => '',
+        ),
+        'type' => 'youtube_video',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_video_evento',
+    'label' => 'Video',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'youtube',
+      'settings' => array(),
+      'type' => 'youtube',
+      'weight' => 31,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Antecedentes');
@@ -1054,6 +1101,8 @@ function govi_eventos_field_default_field_instances() {
   t('Select the start and end dates for this event.');
   t('Suba una imagen para acompañar este artículo.');
   t('Tags');
+  t('Video');
+  t('digite la url del video.');
 
   return $field_instances;
 }
