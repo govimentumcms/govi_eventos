@@ -344,5 +344,24 @@ function govi_eventos_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
+  // Exported field_base: 'field_video_evento'.
+  $field_bases['field_video_evento'] = array(
+    'active' => 1,
+    'cardinality' => 4,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_video_evento',
+    'indexes' => array(
+      'video_id' => array(
+        0 => 'video_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'youtube',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'youtube',
+  );
+
   return $field_bases;
 }
