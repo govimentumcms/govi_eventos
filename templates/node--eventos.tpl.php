@@ -101,7 +101,8 @@
 	  </div>
 	  <div class="pure-u-1-1">
 	  	<?php print render($content['field_descripcion_evento']); ?> 
-	  	<?php print render($content['field_inscripcion_evento']); ?>
+	  	<?php print render($content['field_inscripcion_evento']); ?> 
+	  	<?php print render($content['field_boleteria_evento']); ?>
 	  	<?php print render($content['field_archivos_adjuntos_evento']); ?> 
 	  </div>
 	  <div class="videos pure-u-1-1">

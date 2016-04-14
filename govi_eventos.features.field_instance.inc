@@ -596,7 +596,7 @@ function govi_eventos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 1,
+      'weight' => 7,
     ),
   );
 
@@ -638,7 +638,51 @@ function govi_eventos_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 2,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-eventos-field_boleteria_evento'.
+  $field_instances['node-eventos-field_boleteria_evento'] = array(
+    'bundle' => 'eventos',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Digite las opciones de la boleteria.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_boleteria_evento',
+    'label' => 'boleteria',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 2,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
     ),
   );
 
@@ -682,7 +726,7 @@ function govi_eventos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -1,
+      'weight' => 4,
     ),
   );
 
@@ -737,7 +781,7 @@ function govi_eventos_field_default_field_instances() {
         'year_range' => '-0:+10',
       ),
       'type' => 'date_popup',
-      'weight' => -3,
+      'weight' => 2,
     ),
   );
 
@@ -774,7 +818,7 @@ function govi_eventos_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => -2,
+      'weight' => 3,
     ),
   );
 
@@ -818,7 +862,7 @@ function govi_eventos_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 9,
     ),
   );
 
@@ -875,7 +919,7 @@ function govi_eventos_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 5,
+      'weight' => 11,
     ),
   );
 
@@ -915,7 +959,7 @@ function govi_eventos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => -4,
+      'weight' => 1,
     ),
   );
 
@@ -993,7 +1037,7 @@ function govi_eventos_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 0,
+      'weight' => 6,
     ),
   );
 
@@ -1033,7 +1077,7 @@ function govi_eventos_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 4,
+      'weight' => 10,
     ),
   );
 
@@ -1080,7 +1124,7 @@ function govi_eventos_field_default_field_instances() {
       'module' => 'youtube',
       'settings' => array(),
       'type' => 'youtube',
-      'weight' => 31,
+      'weight' => 13,
     ),
   );
 
@@ -1094,6 +1138,7 @@ function govi_eventos_field_default_field_instances() {
   t('Describe Event status');
   t('Descripción');
   t('Digite el lugar del evento');
+  t('Digite las opciones de la boleteria.');
   t('Escriba una lista de palabras separadas por comas para describir su contenido.');
   t('Estado');
   t('Event Description');
@@ -1110,6 +1155,7 @@ function govi_eventos_field_default_field_instances() {
   t('Suba una imagen para acompañar este artículo.');
   t('Tags');
   t('Video');
+  t('boleteria');
   t('digite la url del video.');
 
   return $field_instances;
