@@ -666,7 +666,7 @@ function govi_eventos_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_descripcion_evento',
     'label' => 'Descripción',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -675,6 +675,10 @@ function govi_eventos_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
         'rows' => 5,
       ),
       'type' => 'text_textarea',
@@ -798,7 +802,7 @@ function govi_eventos_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_informacion_contacto_event',
     'label' => 'Información Contacto',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -807,6 +811,10 @@ function govi_eventos_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
         'rows' => 5,
       ),
       'type' => 'text_textarea',
@@ -895,7 +903,7 @@ function govi_eventos_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_lugar_evento',
     'label' => 'Lugar',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1013,7 +1021,7 @@ function govi_eventos_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_palabras_claves_evento',
     'label' => 'Palabras Claves',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
