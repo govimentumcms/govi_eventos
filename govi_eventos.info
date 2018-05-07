@@ -1,4 +1,4 @@
-name = Govi eventos
+name = Govi Calendario de Actividades
 description = Implementa característica funcional para gestionar eventos
 core = 7.x
 package = Govimentum

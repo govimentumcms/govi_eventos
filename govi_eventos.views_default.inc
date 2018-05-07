@@ -15,7 +15,7 @@ function govi_eventos_views_default_views() {
   $view->description = '';
   $view->tag = 'Calendar';
   $view->base_table = 'node';
-  $view->human_name = 'Eventos';
+  $view->human_name = '2.6 Calendario de actividades';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */

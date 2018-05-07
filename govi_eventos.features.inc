@@ -50,9 +50,9 @@ function govi_eventos_image_default_styles() {
 function govi_eventos_node_info() {
   $items = array(
     'eventos' => array(
-      'name' => t('Eventos'),
+      'name' => t('2.6 Calendario de actividades'),
       'base' => 'node_content',
-      'description' => t('Eventos CMS Distrital'),
+      'description' => t('Con este tipo de contenido puede gestionar los eventos de la Entidad.'),
       'has_title' => '1',
       'title_label' => t('Nombre'),
       'help' => '',
